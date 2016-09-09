@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="iTO-YG-I99">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--PhotoFilter-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="iOSPhotoFilter" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="F7u-xq-CG1">
+                                <rect key="frame" x="20" y="104" width="335" height="501"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="ekJ-XU-D2E" appends="YES" id="BoO-Yz-NAv"/>
+                                </connections>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CnQ-Wl-t4t">
+                                <rect key="frame" x="320" y="613" width="40" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="SaveAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SC2-k8-vR3"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PhotoFilter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7vO-Fc-zVh">
+                                <rect key="frame" x="145" y="28" width="84" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="84" id="gwa-xS-vYU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A2E-la-FhS">
+                                <rect key="frame" x="20" y="613" width="108" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Change Filter"/>
+                                <connections>
+                                    <action selector="ChangeFilter:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vxu-kW-fuK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y2k-fv-2rA">
+                                <rect key="frame" x="251" y="62" width="104" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="PhotoLibrary"/>
+                                <connections>
+                                    <action selector="PhotoLibraryAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oso-oj-GUu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T9m-qM-TgH">
+                                <rect key="frame" x="20" y="62" width="63" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Camera"/>
+                                <connections>
+                                    <action selector="CameraAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xm5-S8-awQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="T9m-qM-TgH" firstAttribute="baseline" secondItem="Y2k-fv-2rA" secondAttribute="baseline" id="2e7-pj-qja"/>
+                            <constraint firstItem="T9m-qM-TgH" firstAttribute="leading" secondItem="F7u-xq-CG1" secondAttribute="leading" id="4JY-Oe-aVr"/>
+                            <constraint firstItem="7vO-Fc-zVh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9aj-oS-KdQ"/>
+                            <constraint firstItem="T9m-qM-TgH" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="62" id="HKc-HU-eN8"/>
+                            <constraint firstAttribute="bottom" secondItem="A2E-la-FhS" secondAttribute="bottom" constant="20" symbolic="YES" id="Oi6-zx-3gI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="CnQ-Wl-t4t" secondAttribute="trailing" constant="-1" id="PSn-xB-1wl"/>
+                            <constraint firstItem="F7u-xq-CG1" firstAttribute="top" secondItem="T9m-qM-TgH" secondAttribute="bottom" constant="8" symbolic="YES" id="R3e-rh-tUW"/>
+                            <constraint firstItem="y3c-jy-aDJ" firstAttribute="top" secondItem="7vO-Fc-zVh" secondAttribute="bottom" constant="15" id="XZ4-XA-n0L"/>
+                            <constraint firstItem="7vO-Fc-zVh" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="28" id="aPg-2O-40q"/>
+                            <constraint firstItem="Y2k-fv-2rA" firstAttribute="top" secondItem="T9m-qM-TgH" secondAttribute="top" id="dcn-83-k9b"/>
+                            <constraint firstItem="CnQ-Wl-t4t" firstAttribute="top" secondItem="A2E-la-FhS" secondAttribute="top" id="e5A-K0-swa"/>
+                            <constraint firstItem="A2E-la-FhS" firstAttribute="leading" secondItem="F7u-xq-CG1" secondAttribute="leading" id="fWK-8K-GGk"/>
+                            <constraint firstItem="T9m-qM-TgH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="4" id="mY3-fK-G9d"/>
+                            <constraint firstItem="F7u-xq-CG1" firstAttribute="centerX" secondItem="7vO-Fc-zVh" secondAttribute="centerX" id="o6i-DJ-8pe"/>
+                            <constraint firstItem="A2E-la-FhS" firstAttribute="top" secondItem="F7u-xq-CG1" secondAttribute="bottom" constant="8" symbolic="YES" id="qbR-bH-DPI"/>
+                            <constraint firstItem="F7u-xq-CG1" firstAttribute="trailing" secondItem="Y2k-fv-2rA" secondAttribute="trailing" id="r6a-xT-xaL"/>
+                            <constraint firstItem="A2E-la-FhS" firstAttribute="baseline" secondItem="CnQ-Wl-t4t" secondAttribute="baseline" id="v88-Oj-mta"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="PhotoFilter" id="kTG-w6-axN"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="Camera" destination="T9m-qM-TgH" id="Nal-AA-Yz7"/>
+                        <outlet property="ChangeFilter" destination="A2E-la-FhS" id="jVU-p3-w8P"/>
+                        <outlet property="ImageDisplay" destination="F7u-xq-CG1" id="JgM-db-u9X"/>
+                        <outlet property="PhotoLibrary" destination="Y2k-fv-2rA" id="RFg-JS-c1h"/>
+                        <outlet property="SaveButton" destination="CnQ-Wl-t4t" id="ODp-Cv-F7M"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="ekJ-XU-D2E">
+                    <connections>
+                        <action selector="SwipeGesture:" destination="BYZ-38-t0r" id="jUs-Yf-Am0"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="pdU-tB-Zim"/>
+            </objects>
+            <point key="canvasLocation" x="1116.5" y="361.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="YHz-nK-Odj">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="iTO-YG-I99" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="96m-P7-LS3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="3GO-Kp-uNg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6zV-50-utr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="304" y="361"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Image" width="540" height="540"/>
+    </resources>
+</document>
